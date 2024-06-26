@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 if os.path.isfile('.env'):
     load_dotenv()
 
-API_FLASK_CONVERT = "https://70d9-103-82-14-56.ngrok-free.app/zodiac" if os.getenv("API_FLASK_CONVERT") is None else os.getenv("API_FLASK_CONVERT")
+API_FLASK_CONVERT = "https://0636-2404-8000-1001-a561-2c59-4abe-4947-4816.ngrok-free.app/zodiac" if os.getenv("API_FLASK_CONVERT") is None else os.getenv("API_FLASK_CONVERT")
 st.title("Zodiac Finder:stars:")
 
 name = st.text_input("What is your name?")

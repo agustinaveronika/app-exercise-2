@@ -26,11 +26,10 @@ def get_zodiac(day, month):
         return "Capricorn"
     elif (month == "January" and day >= 20) or (month == "February" and day <= 18):
         return "Aquarius"
-    elif (month == "February" and day >= 19) or (month == "March" and day <= 20):
-        return "Pisces"
     else:
-        return "Unknown"
-    
+        (month == "February" and day >= 19) or (month == "March" and day <= 20)
+        return "Pisces"
+
 @app.route('/zodiac', methods=['POST'])
 def zodiac():
   data = request.get_json()
