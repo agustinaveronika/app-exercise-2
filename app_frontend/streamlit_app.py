@@ -21,7 +21,7 @@ day = st.selectbox("Select your birth date", range(1, 32))
 # Display zodiac result
 if st.button("Check your zodiac"):
     response = requests.post(
-        " https://7c74-182-253-54-154.ngrok-free.app/zodiac",
+        "https://70d9-103-82-14-56.ngrok-free.app/zodiac",
         json={"name": name, "month": month, "day": day}
     )
     if name.strip():  # Check if name is not empty 
