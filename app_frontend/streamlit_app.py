@@ -1,5 +1,12 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
+
+if os.path.isfile('.env'):
+    load_dotenv()
+
+API_FLASK_CONVERT = "https://70d9-103-82-14-56.ngrok-free.app/zodiac" if os.getenv("API_FLASK_CONVERT") is None else os.getenv("API_FLASK_CONVERT")
 
 st.title("Zodiac Finder:stars:")
 
@@ -21,8 +28,7 @@ day = st.selectbox("Select your birth date", range(1, 32))
 # Display zodiac result
 if st.button("Check your zodiac"):
     response = requests.post(
-        "https://70d9-103-82-14-56.ngrok-free.app/zodiac",
-        
+       API_FLASK_CONVERT,
         json={"name": name, "month": month, "day": day}
     )
     if name.strip():  # Check if name is not empty 
