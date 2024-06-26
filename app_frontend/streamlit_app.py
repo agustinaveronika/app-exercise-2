@@ -30,7 +30,7 @@ if st.button("Check your zodiac"):
             result = response.json().get("zodiac")
             st.write(f"Hello {name}:wave:")
             st.write(f"Your Zodiac is {result}:star2:")
-        # else:
-        #     st.error("Error to check your Zodiac")
+        else:
+            st.error("Error to check your Zodiac")
     else:
         st.warning("Please enter your name :pensive:")
